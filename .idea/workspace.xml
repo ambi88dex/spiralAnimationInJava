@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="959b4675-5c04-4a71-9e60-68616e5a321e" name="Default" comment="Corrected rotateSegment Function, initial config is correct for six sides.">
+    <list default="true" id="959b4675-5c04-4a71-9e60-68616e5a321e" name="Default" comment="">
       <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProcessingInJava/Coord.class" afterPath="$PROJECT_DIR$/out/production/ProcessingInJava/Coord.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/ProcessingInJava/MySketch.class" afterPath="$PROJECT_DIR$/out/production/ProcessingInJava/MySketch.class" />
       <change beforePath="$PROJECT_DIR$/src/MySketch.java" afterPath="$PROJECT_DIR$/src/MySketch.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,12 +21,14 @@
       <file leaf-file-name="MySketch.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MySketch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="58" column="9" lean-forward="true" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+            <state relative-caret-position="167">
+              <caret line="115" column="41" lean-forward="false" selection-start-line="115" selection-start-column="41" selection-end-line="115" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5929#5930#0" expanded="true" />
-                <element signature="e#5959#5960#0" expanded="true" />
+                <element signature="e#1006#1007#0" expanded="true" />
+                <element signature="e#1072#1073#0" expanded="true" />
+                <element signature="e#5177#5178#0" expanded="true" />
+                <element signature="e#5207#5208#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -51,14 +55,15 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>float</find>
       <find>system</find>
+      <find>float</find>
     </findStrings>
     <replaceStrings>
       <replace>double</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -102,10 +107,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -126,6 +130,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -162,7 +167,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="MySketch" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="12 1000 1000" />
+      <option name="PROGRAM_PARAMETERS" value="6 1000 1000" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -263,7 +268,8 @@
       <workItem from="1521196789636" duration="2375000" />
       <workItem from="1522075062132" duration="16958000" />
       <workItem from="1522096793360" duration="214000" />
-      <workItem from="1522125449373" duration="3028000" />
+      <workItem from="1522125449373" duration="6501000" />
+      <workItem from="1522158687722" duration="11549000" />
     </task>
     <task id="LOCAL-00001" summary="Basic Angle Created.&#10;Angle augmentation remaining.(i.e changing the fourth paramameter in the rotation function.)">
       <created>1522096855213</created>
@@ -272,11 +278,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522096855213</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Corrected rotateSegment Function, initial config is correct for six sides.">
+      <created>1522128555876</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1522128555876</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22575000" />
+    <option name="totallyTimeSpent" value="37597000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="97" y="338" width="1366" height="744" extended-state="6" />
@@ -319,7 +332,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic Angle Created.&#10;Angle augmentation remaining.(i.e changing the fourth paramameter in the rotation function.)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic Angle Created.&#10;Angle augmentation remaining.(i.e changing the fourth paramameter in the rotation function.)" />
+    <MESSAGE value="Corrected rotateSegment Function, initial config is correct for six sides." />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected rotateSegment Function, initial config is correct for six sides." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -330,12 +344,28 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/MySketch.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1006#1007#0" expanded="true" />
+            <element signature="e#1072#1073#0" expanded="true" />
+            <element signature="e#5177#5178#0" expanded="true" />
+            <element signature="e#5207#5208#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MySketch.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5929#5930#0" expanded="true" />
-            <element signature="e#5959#5960#0" expanded="true" />
+            <element signature="e#1006#1007#0" expanded="true" />
+            <element signature="e#1072#1073#0" expanded="true" />
+            <element signature="e#5177#5178#0" expanded="true" />
+            <element signature="e#5207#5208#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -354,8 +384,10 @@
           <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5929#5930#0" expanded="true" />
-            <element signature="e#5959#5960#0" expanded="true" />
+            <element signature="e#1006#1007#0" expanded="true" />
+            <element signature="e#1072#1073#0" expanded="true" />
+            <element signature="e#5177#5178#0" expanded="true" />
+            <element signature="e#5207#5208#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -368,6 +400,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///media/anishkelkar/Data/Softwares/Processing/processing-3.3/core/library/core.jar!/processing/core/PApplet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="1632" column="30" lean-forward="false" selection-start-line="1632" selection-start-column="30" selection-end-line="1632" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -376,14 +415,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///opt/java/jdk1.8.0_121/src.zip!/java/util/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="105" column="11" lean-forward="false" selection-start-line="105" selection-start-column="11" selection-end-line="105" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MySketch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="58" column="9" lean-forward="true" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+        <state relative-caret-position="167">
+          <caret line="115" column="41" lean-forward="false" selection-start-line="115" selection-start-column="41" selection-end-line="115" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5929#5930#0" expanded="true" />
-            <element signature="e#5959#5960#0" expanded="true" />
+            <element signature="e#1006#1007#0" expanded="true" />
+            <element signature="e#1072#1073#0" expanded="true" />
+            <element signature="e#5177#5178#0" expanded="true" />
+            <element signature="e#5207#5208#0" expanded="true" />
           </folding>
         </state>
       </provider>
