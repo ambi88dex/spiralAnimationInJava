@@ -24,8 +24,8 @@ public class MySketch extends PApplet{
         if(c1.x!=c2.x)
         {
             float slope=(c2.y-c1.y)/(c2.x-c1.x);
-            float y=c1.y-slope*len/sqrt(1f+slope*slope);
-            float x=c1.x-len/sqrt(1f+slope*slope);
+            float y=c1.y+slope*len/sqrt(1f+slope*slope);
+            float x=c1.x+len/sqrt(1f+slope*slope);
             return new Coord(x,y);
         }
         else
@@ -40,9 +40,26 @@ public class MySketch extends PApplet{
         // In this code point c1 is being rotated about c2.
 
         float angleInRadians = (float)Math.toRadians(angleInDegrees/2);
-        float alpha = (float)Math.toDegrees(atan((c2.y-c1.y)/c2.x-c1.x));
-        float x=c1.x+side_length*cos((float)Math.toRadians(alpha+angleInDegrees));
-        float y=c1.y+side_length*sin((float)Math.toRadians(alpha+angleInDegrees));
+
+        float alpha = (float)Math.toDegrees(atan((c1.y-c2.y)/(c1.x-c2.x)));
+        if(c1.x<c2.x) // Second and Third Quadrant
+        {
+            alpha+=180;
+        }
+        else if(c1.x==c2.x)
+        {
+            if(c1.y>c2.y)
+            {
+                alpha=90;
+            }
+            else if(c1.y!=c2.y)
+            {
+                alpha=-90;
+            }
+        }
+
+        float x=c2.x+side_length*cos((float)Math.toRadians(alpha+angleInDegrees));
+        float y=c2.y+side_length*sin((float)Math.toRadians(alpha+angleInDegrees));
         Coord ret = new Coord(x,y);
         return ret;
 
@@ -121,7 +138,7 @@ public class MySketch extends PApplet{
 //
 //          System.out.println("Entered the intitialising while loop " +String.valueOf(minCoordQueue.size()));
 //            System.out.printf("%f,%f,%f,%f\n",peek.x,peek.y,minCoordQueue.peek().x,minCoordQueue.peek().y);
-            line(peek.x,peek.y,minCoordQueue.peek().x,minCoordQueue.peek().y);
+            line(minCoordQueue.peek().x,minCoordQueue.peek().y,peek.x,peek.y);
 //            System.out.println(String.valueOf(peek.x)+","+String.valueOf(peek.y)+":"+String.valueOf(coordQueue.peek().x)+","+String.valueOf(coordQueue.peek().y));
 //            System.out.printf("%f\n",sqrt(pow(peek.y-coordQueue.peek().y,2)+pow(peek.x - coordQueue.peek().x,2)));
             peek= minCoordQueue.peek();
@@ -132,29 +149,29 @@ public class MySketch extends PApplet{
         int iteration_count=1;
         int it=0;
         float angleOfRotation;
-        while(it<iteration_count)
-        {
-            System.out.println(it);
-            if(it%(sides_count-1)==0)
-            {
-                side*=1.1;
-                Coord nextElem = getNexCoordinate(coordQueue.peekFirst(),coordQueue.peekLast(),side);
-                minCoordQueue.add(coordQueue.peekFirst());
-                minCoordQueue.add(nextElem);
-                line(nextElem.x,nextElem.y,coordQueue.peekFirst().x,coordQueue.peekFirst().y);
-//                System.out.printf("%f,%f,%f,%f\n",nextElem.x,nextElem.y,coordQueue.peekLast().x,coordQueue.peekLast().y);
-                coordQueue.addFirst(nextElem);
-            }
-            else
-            {
-                addRotatedPointInTheQueue(minCoordQueue,coordQueue,side,0.0f);
-                peek = minCoordQueue.peek();
-                minCoordQueue.remove();
-                line(peek.x,peek.y,minCoordQueue.peek().x,minCoordQueue.peek().y);
-            }
-            it++;
-            coordQueue.removeLast();
-        }
+//        while(it<iteration_count)
+//        {
+//            System.out.println(it);
+//            if(it%(sides_count-1)==0)
+//            {
+//                side*=1.1;
+//                Coord nextElem = getNexCoordinate(coordQueue.peekFirst(),coordQueue.peekLast(),side);
+//                minCoordQueue.add(coordQueue.peekFirst());
+//                minCoordQueue.add(nextElem);
+//                line(nextElem.x,nextElem.y,coordQueue.peekFirst().x,coordQueue.peekFirst().y);
+////                System.out.printf("%f,%f,%f,%f\n",nextElem.x,nextElem.y,coordQueue.peekLast().x,coordQueue.peekLast().y);
+//                coordQueue.addFirst(nextElem);
+//            }
+//            else
+//            {
+//                addRotatedPointInTheQueue(minCoordQueue,coordQueue,side,0.0f);
+//                peek = minCoordQueue.peek();
+//                minCoordQueue.remove();
+//                line(peek.x,peek.y,minCoordQueue.peek().x,minCoordQueue.peek().y);
+//            }
+//            it++;
+//            coordQueue.removeLast();
+//        }
     }
 
     public void mousePressed()
