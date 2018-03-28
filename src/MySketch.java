@@ -60,9 +60,6 @@ public class MySketch extends PApplet{
     Coord rotateSegment(Coord c1, Coord c2 , float side_length, float angleInDegrees)
     {
         // In this code point c1 is being rotated about c2.
-
-        float angleInRadians = (float)Math.toRadians(angleInDegrees/2);
-
         float alpha = (float)Math.toDegrees(atan((c1.y-c2.y)/(c1.x-c2.x)));
         if(c1.x<c2.x) // Second and Third Quadrant
         {
@@ -113,7 +110,7 @@ public class MySketch extends PApplet{
         minCoordQueue.addFirst(new Coord(0,0));
         coordQueue.addFirst(new Coord(side,0));
         minCoordQueue.addFirst(new Coord(side,0));
-        int iteration_count=sides_count+1;
+        int iteration_count=sides_count+2 ;
         int it=0;
         float angleOfRotation=180f-360f/sides_count;
         while(it<iteration_count)
@@ -121,16 +118,16 @@ public class MySketch extends PApplet{
             System.out.println(it);
             // print the line as per the mincoord deque
             line(minCoordQueue.peekFirst().x,minCoordQueue.peekFirst().y,minCoordQueue.peekLast().x,minCoordQueue.peekLast().y);
-            System.out.printf("%f,%f,%f,%f\n",minCoordQueue.peekFirst().x,minCoordQueue.peekFirst().y,minCoordQueue.peekLast().x,minCoordQueue.peekLast().y);
+//            System.out.printf("%f,%f,%f,%f\n",minCoordQueue.peekFirst().x,minCoordQueue.peekFirst().y,minCoordQueue.peekLast().x,minCoordQueue.peekLast().y);
             if(it%(sides_count-1)==sides_count-2)
             {
                 //change the parameters;
-                side*=1.1;
+                side+=30;
                 Coord nextElem=getNexCoordinate(coordQueue.peekFirst(),coordQueue.peekLast(),side);
                 minCoordQueue.removeLast();
                 coordQueue.removeLast();
                 angleOfRotation=getAugmentedAngle(coordQueue.peekFirst(),nextElem,coordQueue.peekLast());
-                System.out.println("aOR after updation="+angleOfRotation);
+//                System.out.println("aOR after updation="+angleOfRotation);
                 minCoordQueue.addFirst(nextElem);
                 coordQueue.addFirst(nextElem);
             }
